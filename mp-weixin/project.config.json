@@ -32,11 +32,12 @@
     "useStaticServer": true,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
-    "minifyWXML": true
+    "minifyWXML": true,
+    "condition": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.24.2",
-  "appid": "wxffb3637a228223b8",
+  "appid": "wx9e8dde9d2df9df58",
   "projectname": "sky-take-out",
   "condition": {},
   "editorSetting": {
