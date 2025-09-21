@@ -1,7 +1,6 @@
 package com.sky.interceptor;
 
 import com.sky.constant.JwtClaimsConstant;
-import com.sky.context.BaseContext;
 import com.sky.properties.JwtProperties;
 import com.sky.utils.JwtUtil;
 import io.jsonwebtoken.Claims;
@@ -47,16 +46,7 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
             log.info("jwt校验:{}", token);
             Claims claims = JwtUtil.parseJWT(jwtProperties.getAdminSecretKey(), token);
             Long empId = Long.valueOf(claims.get(JwtClaimsConstant.EMP_ID).toString());
-            log.info("当前员工id：{}", empId);
-
-            /*
-            由于每一次请求都是一个线程,且该请求的后续所有逻辑处理(Controller,Service,Mapper层)都是在该线程的内存区进行,
-            因此,该区域存储的局部变量可以在该请求的整个声明周期内传递,可以从拦截器到Controller层到Mapper层等传递.
-            将当前用户id解析后存储到线程内存中,以便于后续逻辑使用.
-             */
-            BaseContext.setCurrentId(empId);
-
-
+            log.info("当前员工id：", empId);
             //3、通过，放行
             return true;
         } catch (Exception ex) {

@@ -6,13 +6,11 @@ import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.OSSException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import java.io.ByteArrayInputStream;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @Slf4j
 public class AliOssUtil {
 
@@ -62,8 +60,7 @@ public class AliOssUtil {
                 .append(endpoint)
                 .append("/")
                 .append(objectName);
-//  https://oss-web-icelark.https://oss-cn-beijing.aliyuncs.com/18943ee1-77a3-48e0-bd95-4fcdf83eea66.jpg
-        // 18943ee1-77a3-48e0-bd95-4fcdf83eea66.jpg
+
         log.info("文件上传到:{}", stringBuilder.toString());
 
         return stringBuilder.toString();
