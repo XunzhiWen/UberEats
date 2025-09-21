@@ -1,0 +1,38 @@
+sky:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: sky_take_out
+    username: root
+    password: 1234
+  alioss:
+    access-key-id: LTAI5tQtkPVsoCP2d9zrQckt
+    access-key-secret: xDC1VxHbNXVYuqER3A9dU47Pf6t6iX
+    bucket-name: oss-web-icelark
+    endpoint: oss-cn-beijing.aliyuncs.com
+
+  #    设置编码阶段的redis相关参数
+  redis:
+    host: localhost
+    database: 0
+    port: 6379
+    password: 1234
+
+
+  wechat:
+    appid: wxa9806751e8ee3ee8
+    secret: 70f5e394189a6c2d2bdee91abf4b1ea9
+
+    api-v3-key:
+    mch-serial-no:
+    mchid:
+    notify-url:
+    private-key-file-path:
+    refund-notify-url:
+    we-chat-pay-cert-file-path:
+
+  shop:
+    address: 黑龙江省哈尔滨市香坊区长江路600号
+  baidu:
+    ak: m4aLWJ9XJRM3yCrBKbZPMeePZu0uqXjv
